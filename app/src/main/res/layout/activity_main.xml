@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="Guess A Number"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/white"
+    tools:context="com.algonquincollege.stor0095.guessanumber.MainActivity">
+
+    <TextView
+        android:text="Guess a number!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDisplayMessage"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app2:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/imageView"
+        android:layout_marginTop="54dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/inputNumberUser"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/inputNumberUser"
+        android:hint="Enter here"
+        android:layout_above="@+id/guessButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp"/>
+
+    <TextView
+        android:text="Between 1 or 1000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDisplayMessage"
+        android:layout_marginTop="16dp"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/inputNumberUser"/>
+
+    <Button
+        android:text="Reset"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/resetButton"
+        android:onClick="onClick"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="54dp"
+        android:layout_alignBaseline="@+id/guessButton"
+        android:layout_alignBottom="@+id/guessButton"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:text="Guess"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/guessButton"
+        android:onClick="onClick"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:elevation="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="106dp"/>
+
+</RelativeLayout>
